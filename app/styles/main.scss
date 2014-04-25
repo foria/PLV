@@ -1,0 +1,213 @@
+// bower:scss
+// endbower
+
+//@import 'normalize';
+//@import 'grid/grid';
+@import 'utility';
+@import 'grid/multiple';
+@import 'vars';
+@import 'fonts';
+
+
+//@import 'sections/header';
+@import 'sections/navigation';
+
+body {
+    //background: #fafafa;
+    font: 16px/1.4em $bodyFont;
+    color: $bodyColor;
+    font-weight: 600;
+}
+strong {
+    font-weight: 700;
+}
+
+div[role="main"] {
+    background: url(../images/bg_texture@2x.jpg) 0 0 repeat-y;
+    background-size: contain;
+}
+
+div[role="main"] p {
+    font-size: 1.813em;
+    line-height: 1.2em;
+    margin-bottom: 30px;
+}
+a {
+    text-decoration: none;
+    color: $secondColor;
+}
+
+h1, h2, h3 {
+    font-family: $headingFont;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5em;
+}
+
+.title {
+    font-size: 5em;
+}
+.secondTitle {
+    font-size: 1.9em;
+}
+
+.mainHeader, .mainFooter {
+    background: url(../images/bg_header.jpg) 0 0 repeat-x;
+    height: 96px;
+    background-size: contain;
+    position: relative;
+}
+.mainHeader {
+    box-shadow: 0 3px 8px #555;
+    position: fixed;
+    z-index: 999999;
+}
+.mainFooter {
+    box-shadow: 0 -3px 8px #555;
+    position: absolute;
+}
+
+
+
+
+// HOME PAGE
+/* Set all parents to full height */
+html, body, 
+// #home,
+.stepsProduction,
+.stepsProduction section { 
+    height: 100%; 
+}
+
+#home {
+
+    header, footer {
+        height: 833px;
+        padding-top: 153px;
+        background: url(../images/nuvole_texture@2x.jpg) top center repeat-y;
+        background-size: contain;
+        position: relative;
+    }
+    
+    .clamWrapper {
+        height: 561px;
+    }
+    .nuvole {
+        height: 445px;
+        width:100%;
+        z-index: 1;
+    }
+    
+    .nuvoleTop {
+        background: url(../images/nuvole_top_home@2x.jpg) bottom center no-repeat;
+        background-size: contain;
+    }
+    
+    .nuvoleBottom {
+        background: url(../images/nuvole_bottom_home@2x.jpg) top center no-repeat;
+        background-size: contain;
+    }
+
+}
+
+.clam {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+.clam img {
+    width: 100%;
+}
+.clam1 {
+    width: 669px;
+    left: 0;
+}
+.clam2 {
+    width: 365px;
+    right: 0;
+}
+
+#home article {
+    overflow: visible;
+}
+
+/* background-attachment does the trick */
+.stepsProduction section {
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 900px 596px;
+    
+    aside {
+        width: 382px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        -moz-transform: translatey(-50%);
+        -ms-transform: translatey(-50%);
+        -o-transform: translatey(-50%);
+        -webkit-transform: translatey(-50%);
+        transform: translatey(-50%)
+    }
+    p {
+        font-size: 1.688em;
+    }
+    .no-touch & {
+        background-attachment: fixed;
+    }
+}
+
+#step1 {
+    background-image: url(../images/home_step1.png);
+}
+
+#step2 {
+    background-image: url(../images/home_step2.png);
+}
+
+#step3 {
+    background-image: url(../images/home_step3.png);
+}
+
+
+
+// CHI SIAMO
+#chisiamo {
+    background: url(../images/bg_content.jpg) 0 0 no-repeat;
+    background-size: contain;
+
+    header:after {
+        background: url(../images/nuvole.png) bottom left no-repeat;
+        background-size: contain;
+        display: block;
+        content:"";
+        height: 194px;
+        margin-top: -121px;
+        position: relative;
+    }
+
+    footer {
+        margin-top: 50px;
+        background: url(../images/bg_subcontent.png) center 0 repeat-x;
+        background-size: auto 100%;
+        height: 587px;
+        div {
+            padding: 60px 0 0;
+        }
+    }
+}
+
+
+
+header img {
+    width: 100%;
+    display: block;
+}
+
+// footer{
+//     div{
+//         max-width: $max_width;
+//         text-align: center;
+//         margin: 0 auto; 
+//     }
+// }

@@ -1,0 +1,91 @@
+.tooltip{
+	position: absolute;
+	display: block;
+	color: white;
+	background: $color_nearlynearlyblack;
+	@include border-radius(4px);
+	padding: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	@include transition(opacity 0.1s ease-out, margin-top 0.1s ease-out);
+	opacity: 0;
+  	filter: alpha(opacity = 0);
+  	margin-top:3px;
+  	z-index: 9000;
+  	
+	.arrow{
+		position: absolute;
+		display: block;
+		top: -5px;
+		left: 50%;
+		margin-left: -5px;
+		background-position: 0 -329px;
+		width: 10px;
+		height: 5px;
+		//@include icons-sprite(arrow);
+	}
+	
+}
+
+.tooltip.show{
+	margin-top:0px;
+	opacity: 1;
+  	filter: alpha(opacity = 100);
+}
+
+nav{
+	width: $total_width;
+	background: white;
+
+	ul{
+		width: $total_width;
+		max-width: $max_width;
+		margin: 0 auto;	
+		@include clearfix();
+
+		#navDownload{
+			//@include icons-sprite(download);
+			display:none;
+		}
+
+		#navGithub{
+			//@include icons-sprite(github);
+			display:none;
+		}
+
+		#navFacebook{
+			//@include icons-sprite(facebook);
+		}
+
+		#navTwitter{
+			//@include icons-sprite(twitter);
+		}
+	}
+}
+
+// ///////////////////////////
+// MEDIA QUERIES
+// ///////////////////////////
+
+@media screen and (min-width: 460px) {
+	
+}
+
+@media screen and (min-width: 550px) {
+}
+
+@media screen and (min-width: 700px) {
+	#navDownload{
+		display: inline-block !important;
+	}
+
+	#navGithub{
+		display: inline-block !important;
+	}
+
+}
+
+
+
+@media screen and (min-width: 900px) {
+}

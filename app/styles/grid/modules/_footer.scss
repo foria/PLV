@@ -1,0 +1,38 @@
+.mainFooter{
+	div{
+		height: 82px;
+		line-height: 82px;
+		//width: $total_width;
+		max-width: $max_width;
+		font-size: 1.375em;
+		color: #fff;
+        text-align: center;
+	}
+
+	&:after {
+		display: block;
+		content: "";
+		border-bottom: 2px #fff solid;
+	}
+}
+
+
+// ///////////////////////////
+// MEDIA QUERIES
+// ///////////////////////////
+
+@media screen and (min-width: 460px) {
+	footer {
+		div{
+
+		}
+	}		
+}
+
+@media screen and (min-width: 700px) {
+	footer {
+		div{
+
+		}
+	}	
+}
