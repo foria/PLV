@@ -1,1 +1,1 @@
-@include font-face($headingFont, font-files("fonts/"+$headingFont+".ttf", "fonts/"+$headingFont+".eot", "fonts/"+$headingFont+".woff"));
+@include font-face($headingFont, font-files($headingFont+".ttf", $headingFont+".eot", $headingFont+".woff"));

@@ -12,6 +12,10 @@
 //@import 'sections/header';
 @import 'sections/navigation';
 
+html {
+    background: url(../images/nuvole_texture@2x.jpg) top center repeat-y;
+    background-size: contain;
+}
 body {
     //background: #fafafa;
     font: 16px/1.4em $bodyFont;
@@ -22,10 +26,10 @@ strong {
     font-weight: 700;
 }
 
-div[role="main"] {
-    background: url(../images/bg_texture@2x.jpg) 0 0 repeat-y;
-    background-size: contain;
-}
+// div[role="main"] {
+//     background: url(../images/bg_texture@2x.jpg) 0 0 repeat-y;
+//     background-size: contain;
+// }
 
 div[role="main"] p {
     font-size: 1.813em;
@@ -73,37 +77,40 @@ h1, h2, h3 {
 // HOME PAGE
 /* Set all parents to full height */
 html, body, 
-// #home,
-.stepsProduction,
-.stepsProduction section { 
+#home div[role="main"],
+.steps__production,
+.steps__production section { 
     height: 100%; 
 }
 
 #home {
 
-    header, footer {
-        height: 833px;
-        padding-top: 153px;
+    .clouds__wrapper {
         background: url(../images/nuvole_texture@2x.jpg) top center repeat-y;
         background-size: contain;
         position: relative;
     }
+
+    .clouds__wrapper_clam {
+        padding-top: 153px;
+        height: 833px;    
+    }
     
-    .clamWrapper {
+    .clam__wrapper {
         height: 561px;
     }
-    .nuvole {
+    .clouds {
         height: 445px;
         width:100%;
         z-index: 1;
     }
     
-    .nuvoleTop {
+    .clouds__top {
         background: url(../images/nuvole_top_home@2x.jpg) bottom center no-repeat;
         background-size: contain;
     }
     
-    .nuvoleBottom {
+    .clouds__bottom {
         background: url(../images/nuvole_bottom_home@2x.jpg) top center no-repeat;
         background-size: contain;
     }
@@ -114,17 +121,106 @@ html, body,
     position: absolute;
     top: 0;
     z-index: 2;
+    img {
+        width: 100%;
+    }
 }
-.clam img {
-    width: 100%;
-}
-.clam1 {
+
+.clam__1 {
     width: 669px;
     left: 0;
 }
-.clam2 {
+.clam__2 {
     width: 365px;
     right: 0;
+}
+
+
+.mongolfiere__wrapper {
+    background: url(../images/bg_texture@2x.jpg) 0 0 repeat-y;
+    background-size: contain;
+    position: relative;
+    height: 520px;
+}
+.mongolfiera {
+    position: absolute;
+    left: 50%;
+}
+
+.mongolfiera__yellow {
+    background: url(../images/mongolfiera_yellow@2x.png) 0 0 no-repeat;
+    background-size: contain;
+    width: 234px;
+    height: 313px;
+    top: -36px;
+    //left: 50%;
+    z-index: 2;
+}
+.mongolfiera__green {
+    background: url(../images/mongolfiera_green@2x.png) 0 0 no-repeat;
+    background-size: contain;
+    width: 237px;
+    height: 397px;
+    top: 224px;
+    //left: 65%;
+    z-index: 3;
+}
+.mongolfiera__red {
+    background: url(../images/mongolfiera_red@2x.png) 0 0 no-repeat;
+    background-size: contain;
+    width: 377px;
+    height: 462px;
+    top: 100px;
+    //left: 7%;
+    z-index: 4;
+}
+
+$mongolfiere: 3;
+@for $i from 1 through $mongolfiere {
+
+    @-webkit-keyframes anim-#{$i} {
+        0% {
+            margin-left: -450px;
+        }
+        100%{
+            margin-left: 300px;
+        }
+    }
+    @-moz-keyframes anim-#{$i} {
+        0% {
+            margin-left: -450px;
+        }
+        100%{
+            margin-left: 450px;
+        }
+    }
+    @-o-keyframes anim-#{$i} {
+        0% {
+            margin-left: -450px;
+        }
+        100%{
+            margin-left: 450px;
+        }
+    }
+    @keyframes anim-#{$i} {
+        0% {
+            margin-left: -450px;
+        }
+        100%{
+            margin-left: 450px;
+        }
+    }
+     
+    .mongolfiera {
+      &:nth-child(#{$i}){
+        @include vendor-prefix(animation-duration, #{5*$i}s);
+        @include vendor-prefix(animation-name, anim-#{$i});
+        @include vendor-prefix(animation-iteration-count, infinite);
+        @include vendor-prefix(animation-direction, alternate);
+        @include vendor-prefix(animation-timing-function, ease-in-out);
+      }
+    }
+
 }
 
 #home article {
@@ -132,7 +228,7 @@ html, body,
 }
 
 /* background-attachment does the trick */
-.stepsProduction section {
+.steps__production section {
     position: relative;
     background-position: center center;
     background-repeat: no-repeat;
@@ -141,7 +237,8 @@ html, body,
     aside {
         width: 382px;
         position: absolute;
-        left: 0;
+        left: 50%;
+        margin-left: -408px;
         top: 50%;
         -moz-transform: translatey(-50%);
         -ms-transform: translatey(-50%);
@@ -154,6 +251,19 @@ html, body,
     }
     .no-touch & {
         background-attachment: fixed;
+    }
+}
+
+#step0 {
+    padding-top: 344px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+    // background: url(../images/home_step0@2x.jpg) bottom center no-repeat;
+    // background-size: contain;
+    img {
+        width: 100%;
     }
 }
 

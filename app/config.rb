@@ -20,3 +20,8 @@ line_comments = false
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+module Sass::Script::Functions
+  def random(max = Sass::Script::Number.new(100))
+    Sass::Script::Number.new(rand(max.value), max.numerator_units, max.denominator_units)
+  end
+end
