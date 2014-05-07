@@ -17,7 +17,7 @@ body{
 
 article, .wrapper {
 	@include clearfix();
-	width: $total_width;
+	width: $max_width;
 	max-width: $max_width;
 	margin: 0 auto;	
 	margin-bottom: 80px;

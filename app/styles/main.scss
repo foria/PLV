@@ -21,6 +21,7 @@ body {
     font: 16px/1.4em $bodyFont;
     color: $bodyColor;
     font-weight: 600;
+    text-align: center;
 }
 strong {
     font-weight: 700;
@@ -41,7 +42,7 @@ a {
     color: $secondColor;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: $headingFont;
     font-weight: normal;
     font-style: normal;
@@ -65,10 +66,6 @@ h1, h2, h3 {
     box-shadow: 0 3px 8px #555;
     position: fixed;
     z-index: 999999;
-}
-.mainFooter {
-    box-shadow: 0 -3px 8px #555;
-    position: absolute;
 }
 
 
@@ -113,6 +110,11 @@ html, body,
     .clouds__bottom {
         background: url(../images/nuvole_bottom_home@2x.jpg) top center no-repeat;
         background-size: contain;
+    }
+
+    .clouds__title {
+        padding-top: 344px;
+        padding-top: 344px;
     }
 
 }
@@ -211,15 +213,15 @@ $mongolfiere: 3;
         }
     }
      
-    .mongolfiera {
-      &:nth-child(#{$i}){
-        @include vendor-prefix(animation-duration, #{5*$i}s);
-        @include vendor-prefix(animation-name, anim-#{$i});
-        @include vendor-prefix(animation-iteration-count, infinite);
-        @include vendor-prefix(animation-direction, alternate);
-        @include vendor-prefix(animation-timing-function, ease-in-out);
-      }
-    }
+    // .mongolfiera {
+    //   &:nth-child(#{$i}){
+    //     @include vendor-prefix(animation-duration, #{5*$i}s);
+    //     @include vendor-prefix(animation-name, anim-#{$i});
+    //     @include vendor-prefix(animation-iteration-count, infinite);
+    //     @include vendor-prefix(animation-direction, alternate);
+    //     @include vendor-prefix(animation-timing-function, ease-in-out);
+    //   }
+    // }
 
 }
 
@@ -244,7 +246,8 @@ $mongolfiere: 3;
         -ms-transform: translatey(-50%);
         -o-transform: translatey(-50%);
         -webkit-transform: translatey(-50%);
-        transform: translatey(-50%)
+        transform: translatey(-50%);
+        text-align: left;
     }
     p {
         font-size: 1.688em;
@@ -255,8 +258,6 @@ $mongolfiere: 3;
 }
 
 #step0 {
-    padding-top: 344px;
-    text-align: center;
     position: relative;
     z-index: 2;
     margin-bottom: 30px;
@@ -279,21 +280,57 @@ $mongolfiere: 3;
     background-image: url(../images/home_step3.png);
 }
 
+.fixOverflowSteps {
+    height: 300%;
+}
 
+.tipologie {
+    text-align: center;
+
+     li {
+        width: 40%;
+        margin: 5%;
+        float: left;
+        text-align: center;
+        &:nth-child(3){
+            clear: left;
+        }
+     }
+}
+
+.provala {
+    background: url(../images/bg_provala.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 883px;
+    height: 701px;
+    margin: 80px auto 0;
+    padding-top: 392px;
+}
 
 // CHI SIAMO
 #chisiamo {
     background: url(../images/bg_content.jpg) 0 0 no-repeat;
     background-size: contain;
-
+    padding-top: 96px;
+    
+    header {
+        background: url(../images/foto_retina.jpg) 0 96px no-repeat;
+        background-size: 100% auto;
+        background-attachment: fixed;
+        position: relative;
+        img {
+            visibility: hidden;
+        }
+    }
     header:after {
         background: url(../images/nuvole.png) bottom left no-repeat;
         background-size: contain;
         display: block;
         content:"";
         height: 194px;
-        margin-top: -121px;
-        position: relative;
+        width: 100%;
+        bottom: 0;
+        position: absolute;
     }
 
     footer {
@@ -305,19 +342,13 @@ $mongolfiere: 3;
             padding: 60px 0 0;
         }
     }
+
+    p {
+        text-align: left;
+    }
 }
-
-
 
 header img {
     width: 100%;
     display: block;
 }
-
-// footer{
-//     div{
-//         max-width: $max_width;
-//         text-align: center;
-//         margin: 0 auto; 
-//     }
-// }

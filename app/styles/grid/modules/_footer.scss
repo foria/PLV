@@ -1,12 +1,18 @@
 .mainFooter{
+    box-shadow: 0 -3px 8px #555;
+
 	div{
 		height: 82px;
-		line-height: 82px;
-		//width: $total_width;
-		max-width: $max_width;
-		font-size: 1.375em;
-		color: #fff;
-        text-align: center;
+		margin-bottom: 0;
+		display: table;
+        p {
+			line-height: 82px;
+			font-size: 1.375em;
+			color: #fff;
+	        text-align: center;
+	        display: table-cell;
+	        vertical-align: middle;
+        }
 	}
 
 	&:after {
