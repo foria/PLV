@@ -73,11 +73,11 @@ h1, h2, h3, h4 {
 
 // HOME PAGE
 /* Set all parents to full height */
-html, body, 
+html, body,
 #home div[role="main"],
 .steps__production,
-.steps__production section { 
-    height: 100%; 
+.steps__production section {
+    height: 100%;
 }
 
 #home {
@@ -90,9 +90,9 @@ html, body,
 
     .clouds__wrapper_clam {
         padding-top: 153px;
-        height: 833px;    
+        height: 833px;
     }
-    
+
     .clam__wrapper {
         height: 561px;
     }
@@ -101,12 +101,12 @@ html, body,
         width:100%;
         z-index: 1;
     }
-    
+
     .clouds__top {
         background: url(../images/nuvole_top_home@2x.jpg) bottom center no-repeat;
         background-size: contain;
     }
-    
+
     .clouds__bottom {
         background: url(../images/nuvole_bottom_home@2x.jpg) top center no-repeat;
         background-size: contain;
@@ -212,16 +212,16 @@ $mongolfiere: 3;
             margin-left: 450px;
         }
     }
-     
-    // .mongolfiera {
-    //   &:nth-child(#{$i}){
-    //     @include vendor-prefix(animation-duration, #{5*$i}s);
-    //     @include vendor-prefix(animation-name, anim-#{$i});
-    //     @include vendor-prefix(animation-iteration-count, infinite);
-    //     @include vendor-prefix(animation-direction, alternate);
-    //     @include vendor-prefix(animation-timing-function, ease-in-out);
-    //   }
-    // }
+
+    .mongolfiera {
+      &:nth-child(#{$i}){
+        @include vendor-prefix(animation-duration, #{5*$i}s);
+        @include vendor-prefix(animation-name, anim-#{$i});
+        @include vendor-prefix(animation-iteration-count, infinite);
+        @include vendor-prefix(animation-direction, alternate);
+        @include vendor-prefix(animation-timing-function, ease-in-out);
+      }
+    }
 
 }
 
@@ -235,7 +235,7 @@ $mongolfiere: 3;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 900px 596px;
-    
+
     aside {
         width: 382px;
         position: absolute;
@@ -312,7 +312,7 @@ $mongolfiere: 3;
     background: url(../images/bg_content.jpg) 0 0 no-repeat;
     background-size: contain;
     padding-top: 96px;
-    
+
     header {
         background: url(../images/foto_retina.jpg) 0 96px no-repeat;
         background-size: 100% auto;
