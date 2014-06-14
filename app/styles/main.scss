@@ -47,25 +47,29 @@ h1, h2, h3, h4 {
     font-weight: normal;
     font-style: normal;
     line-height: 1.5em;
+    margin-bottom: 30px;
 }
 
 .title {
     font-size: 5em;
 }
 .secondTitle {
+    font-size: 2.5em;
+}
+.thirdTitle {
     font-size: 1.9em;
 }
 
-.mainHeader, .mainFooter {
+#mainHeader, #mainFooter {
     background: url(../images/bg_header.jpg) 0 0 repeat-x;
     height: 96px;
     background-size: contain;
     position: relative;
 }
-.mainHeader {
+#mainHeader {
     box-shadow: 0 3px 8px #555;
     position: fixed;
-    z-index: 999999;
+    z-index: 9999999;
 }
 
 
@@ -80,43 +84,50 @@ html, body,
     height: 100%;
 }
 
-#home {
+.clouds__wrapper {
+    background: url(../images/nuvole_texture@2x.jpg) top center repeat-y;
+    background-size: contain;
+    position: relative;
+}
+.clouds {
+    height: 445px;
+    width:100%;
+    z-index: 1;
+}
 
-    .clouds__wrapper {
-        background: url(../images/nuvole_texture@2x.jpg) top center repeat-y;
-        background-size: contain;
-        position: relative;
+.clouds__top {
+    background: url(../images/nuvole_top_home@2x.jpg) bottom center no-repeat;
+    background-size: contain;
+    #contatti & {
+        background-image: url(../images/nuvole_contatti_top.png);
+        z-index: 999999;
+        height: 230px;
+        background-size: initial;
     }
+}
 
-    .clouds__wrapper_clam {
-        padding-top: 153px;
-        height: 833px;
+.clouds__bottom {
+    background: url(../images/nuvole_bottom_home@2x.jpg) top center no-repeat;
+    background-size: contain;
+    #contatti & {
+        background-image: url(../images/nuvole_contatti_bottom.png);
+        z-index: 999999;
+        height: 230px;
+        background-size: initial;
     }
+}
 
-    .clam__wrapper {
-        height: 561px;
-    }
-    .clouds {
-        height: 445px;
-        width:100%;
-        z-index: 1;
-    }
+.clouds__title {
+    padding-top: 350px;
+}
 
-    .clouds__top {
-        background: url(../images/nuvole_top_home@2x.jpg) bottom center no-repeat;
-        background-size: contain;
-    }
+.clouds__wrapper_clam {
+    padding-top: 153px;
+    height: 833px;
+}
 
-    .clouds__bottom {
-        background: url(../images/nuvole_bottom_home@2x.jpg) top center no-repeat;
-        background-size: contain;
-    }
-
-    .clouds__title {
-        padding-top: 344px;
-        padding-top: 344px;
-    }
-
+.clam__wrapper {
+    height: 561px;
 }
 
 .clam {
@@ -143,6 +154,10 @@ html, body,
     background-size: contain;
     position: relative;
     height: 520px;
+    &.higher {
+        height: 1200px;
+        overflow: hidden;
+    }
 }
 .mongolfiera {
     position: absolute;
@@ -185,7 +200,7 @@ $mongolfiere: 3;
             margin-left: -450px;
         }
         100%{
-            margin-left: 300px;
+            margin-left: 250px;
         }
     }
     @-moz-keyframes anim-#{$i} {
@@ -193,7 +208,7 @@ $mongolfiere: 3;
             margin-left: -450px;
         }
         100%{
-            margin-left: 450px;
+            margin-left: 250px;
         }
     }
     @-o-keyframes anim-#{$i} {
@@ -201,7 +216,7 @@ $mongolfiere: 3;
             margin-left: -450px;
         }
         100%{
-            margin-left: 450px;
+            margin-left: 250px;
         }
     }
     @keyframes anim-#{$i} {
@@ -209,7 +224,7 @@ $mongolfiere: 3;
             margin-left: -450px;
         }
         100%{
-            margin-left: 450px;
+            margin-left: 250px;
         }
     }
 
@@ -222,7 +237,19 @@ $mongolfiere: 3;
         @include vendor-prefix(animation-timing-function, ease-in-out);
       }
     }
-
+}
+.mongolfiera__with__piada {
+    background: url(../images/home_before_piade.png) 0 0 no-repeat;
+    background-size: contain;
+    width: 1500px;
+    height: 1198px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-39%);
+    //left: 7%;
+    z-index: 1;
+    animation: none;
 }
 
 #home article {
@@ -278,6 +305,10 @@ $mongolfiere: 3;
 
 #step3 {
     background-image: url(../images/home_step3.png);
+}
+
+#step4 {
+    background-image: url(../images/home_step4.png);
 }
 
 .fixOverflowSteps {
@@ -462,6 +493,7 @@ div[role="main"] .cbp-so-section p {
     transform: translateX(0px);
     opacity: 1;
 }
+
 
 /* For example, add a delay for the right side:
 .cbp-so-section.cbp-so-animate .cbp-so-side-right {
