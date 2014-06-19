@@ -22,10 +22,10 @@ nav {
 				color: $secondColor;
 				text-decoration: none;
 				text-transform: uppercase;
-			}
-			a:hover {
-				border-color: #fff;
-				background-color: #cf4243;
+				&:hover, &.current {
+					border-color: #fff;
+					background-color: #cf4243;
+				}
 			}
 			&:nth-child(2) a {
 				margin-top: -10px;

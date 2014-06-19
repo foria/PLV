@@ -494,6 +494,40 @@ div[role="main"] .cbp-so-section p {
     opacity: 1;
 }
 
+// CONTATTI
+.form--wrapper {
+    background: url(../images/form_contatti.png) top right no-repeat;
+    width: 1024px;
+    height: 728px;
+    margin: 0 auto 50px;
+    padding: 240px 130px 0 121px;
+    form {
+        width: 44%;
+        float: left;
+    }
+    input, textarea {
+        width: 100%;
+        border-radius: 25px;
+        display: block;
+        margin-bottom: 17px;
+        font-size: 1.750em;
+        line-height: 1.4em;
+        border: 0 none;
+        background-color: #f9f7f1;
+        color: #a19b9b;
+        padding: 0 30px;
+    }
+    aside {
+        width: 42%;
+        float: right;
+        text-align: left;
+        span, a {
+            color: #e15c59;
+        }
+    }
+}
+
+
 
 /* For example, add a delay for the right side:
 .cbp-so-section.cbp-so-animate .cbp-so-side-right {
