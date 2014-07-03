@@ -53,11 +53,12 @@
             </header>
             <h2 class="title textCentered">Restiamo in contatto</h2>
             <div class="form--wrapper">
-                <form>
-                    <input type="text" title="nome"></input>
-                    <input type="email" title="email"></input>
-                    <input type="text" title="telefono"></input>
-                    <textarea title="messaggio"></textarea>
+                <form name="contactform" method="post" action="send_form_email.php" required>
+                    <input type="text" title="nome" name="nome" required>
+                    <input type="email" title="email" name="email" required>
+                    <input type="text" title="telefono" name="telefono" required>
+                    <textarea title="messaggio" name="messaggio" required></textarea>
+                    <input type="submit" value="Invia">
                 </form>
                 <aside>
                     <p><strong>Piadina le vele s.n.c.</strong><br>

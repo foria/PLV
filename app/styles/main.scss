@@ -13,7 +13,7 @@
 @import 'sections/navigation';
 
 html {
-    background: url(../images/nuvole_texture@2x.jpg) top center repeat-y;
+    background: url(../images/nuvole_texture.jpg) top center repeat-y;
     background-size: contain;
 }
 body {
@@ -85,7 +85,7 @@ html, body,
 }
 
 .clouds__wrapper {
-    background: url(../images/nuvole_texture@2x.jpg) top center repeat-y;
+    background: url(../images/nuvole_texture.jpg) top center repeat-y;
     background-size: contain;
     position: relative;
 }
@@ -96,7 +96,7 @@ html, body,
 }
 
 .clouds__top {
-    background: url(../images/nuvole_top_home@2x.jpg) bottom center no-repeat;
+    background: url(../images/nuvole_top_home.jpg) bottom center no-repeat;
     background-size: contain;
     #contatti & {
         background-image: url(../images/nuvole_contatti_top.png);
@@ -107,7 +107,7 @@ html, body,
 }
 
 .clouds__bottom {
-    background: url(../images/nuvole_bottom_home@2x.jpg) top center no-repeat;
+    background: url(../images/nuvole_bottom_home.jpg) top center no-repeat;
     background-size: contain;
     #contatti & {
         background-image: url(../images/nuvole_contatti_bottom.png);
@@ -150,7 +150,7 @@ html, body,
 
 
 .mongolfiere__wrapper {
-    background: url(../images/bg_texture@2x.jpg) 0 0 repeat-y;
+    background: url(../images/bg_texture.jpg) 0 0 repeat-y;
     background-size: contain;
     position: relative;
     height: 520px;
@@ -165,7 +165,7 @@ html, body,
 }
 
 .mongolfiera__yellow {
-    background: url(../images/mongolfiera_yellow@2x.png) 0 0 no-repeat;
+    background: url(../images/mongolfiera_yellow.png) 0 0 no-repeat;
     background-size: contain;
     width: 234px;
     height: 313px;
@@ -174,7 +174,7 @@ html, body,
     z-index: 2;
 }
 .mongolfiera__green {
-    background: url(../images/mongolfiera_green@2x.png) 0 0 no-repeat;
+    background: url(../images/mongolfiera_green.png) 0 0 no-repeat;
     background-size: contain;
     width: 237px;
     height: 397px;
@@ -183,7 +183,7 @@ html, body,
     z-index: 3;
 }
 .mongolfiera__red {
-    background: url(../images/mongolfiera_red@2x.png) 0 0 no-repeat;
+    background: url(../images/mongolfiera_red.png) 0 0 no-repeat;
     background-size: contain;
     width: 377px;
     height: 462px;
@@ -495,6 +495,9 @@ div[role="main"] .cbp-so-section p {
 }
 
 // CONTATTI
+#contatti .clouds__wrapper {
+    overflow: hidden;
+}
 .form--wrapper {
     background: url(../images/form_contatti.png) top right no-repeat;
     width: 1024px;
