@@ -6,7 +6,7 @@ if(isset($_POST['email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
 
-    $email_to = "work@marcomelluso.com";
+    $email_to = "info@piadinalevele.it";
 
     $email_subject = "Form di contatto dal sito";
 
@@ -132,7 +132,7 @@ $headers = 'From: '.$email_from."\r\n".
 
 
 
-Grazie per averci contattato. Cercheremo di risponderti nel più breve tempo possibile.
+Grazie per averci contattato. Cercheremo di risponderti nel pi&ugrave; breve tempo possibile.
 
 
 

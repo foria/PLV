@@ -79,9 +79,11 @@ h1, h2, h3, h4 {
 /* Set all parents to full height */
 html, body,
 #home div[role="main"],
-.steps__production,
-.steps__production section {
+.steps__production {
     height: 100%;
+    .touch & {
+        height: auto;
+    }
 }
 
 .clouds__wrapper {
@@ -111,9 +113,9 @@ html, body,
     background-size: contain;
     #contatti & {
         background-image: url(../images/nuvole_contatti_bottom.png);
+        background-position: bottom center;
         z-index: 999999;
         height: 230px;
-        background-size: initial;
     }
 }
 
@@ -140,11 +142,9 @@ html, body,
 }
 
 .clam__1 {
-    width: 669px;
     left: 0;
 }
 .clam__2 {
-    width: 365px;
     right: 0;
 }
 
@@ -170,8 +170,10 @@ html, body,
     width: 234px;
     height: 313px;
     top: -36px;
-    //left: 50%;
     z-index: 2;
+    .touch & {
+        left: 50%;
+    }
 }
 .mongolfiera__green {
     background: url(../images/mongolfiera_green.png) 0 0 no-repeat;
@@ -179,8 +181,10 @@ html, body,
     width: 237px;
     height: 397px;
     top: 224px;
-    //left: 65%;
     z-index: 3;
+    .touch & {
+        left: 65%;
+    }
 }
 .mongolfiera__red {
     background: url(../images/mongolfiera_red.png) 0 0 no-repeat;
@@ -188,8 +192,10 @@ html, body,
     width: 377px;
     height: 462px;
     top: 100px;
-    //left: 7%;
     z-index: 4;
+    .touch & {
+        left: 7%;
+    }
 }
 
 $mongolfiere: 3;
@@ -235,9 +241,13 @@ $mongolfiere: 3;
         @include vendor-prefix(animation-iteration-count, infinite);
         @include vendor-prefix(animation-direction, alternate);
         @include vendor-prefix(animation-timing-function, ease-in-out);
+        .touch & {
+            @include vendor-prefix(animation-name, none);
+        }
       }
     }
 }
+
 .mongolfiera__with__piada {
     background: url(../images/home_before_piade.png) 0 0 no-repeat;
     background-size: contain;
@@ -262,6 +272,7 @@ $mongolfiere: 3;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 900px 596px;
+    height: 100%;
 
     aside {
         width: 382px;
@@ -281,6 +292,9 @@ $mongolfiere: 3;
     }
     .no-touch & {
         background-attachment: fixed;
+    }
+    .touch {
+        height: 600px;
     }
 }
 
@@ -313,6 +327,9 @@ $mongolfiere: 3;
 
 .fixOverflowSteps {
     height: 300%;
+    .touch & {
+        height: 60px;
+    }
 }
 
 .tipologie {
@@ -340,7 +357,7 @@ $mongolfiere: 3;
 
 // CHI SIAMO
 #chisiamo {
-    background: url(../images/bg_content.jpg) 0 0 no-repeat;
+    background: url(../images/bg_content.jpg) 0 0 repeat;
     background-size: contain;
     padding-top: 96px;
 
@@ -532,37 +549,189 @@ div[role="main"] .cbp-so-section p {
 
 
 
-/* For example, add a delay for the right side:
-.cbp-so-section.cbp-so-animate .cbp-so-side-right {
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+@media screen and (max-width: 959px) {
+    .cbp-so-scroller {
+        font-size: 65%;
+    }
+
+    .cbp-so-section h2 {
+        margin: 0;
+    }
+
+    .cbp-so-side img {
+        max-width: 120%;
+    }
 }
-*/
 
-/* Example media queries */
+@media screen and (max-width: 41.125em) {
+    .cbp-so-side {
+        float: none;
+        width: 100%;
+    }
 
-// @media screen and (max-width: 73.5em) {
-//     .cbp-so-scroller {
-//         font-size: 65%;
-//     }
+    .cbp-so-side img {
+        max-width: 100%;
+    }
+}
 
-//     .cbp-so-section h2 {
-//         margin: 0;
-//     }
 
-//     .cbp-so-side img {
-//         max-width: 120%;
-//     }
-// }
+///////////////////
+// LAYOUT > 720  //
+///////////////////
 
-// @media screen and (max-width: 41.125em) {
-//     .cbp-so-side {
-//         float: none;
-//         width: 100%;
-//     }
+@media screen and (min-width: 720px) {
 
-//     .cbp-so-side img {
-//         max-width: 100%;
-//     }
-// }
+    nav ul li a {
+        font-size: 1em;
+    }
+    .clam__1 {
+        width: 80%;
+    }
+    .clam__2 {
+        width: 40%;
+    }
+
+}
+
+///////////////////
+// LAYOUT > 768  //
+///////////////////
+
+@media screen and (max-width: 768px) {
+
+    html, body,
+    #home div[role="main"],
+    .steps__production {
+        height: auto;
+    }
+
+    .steps__production section {
+        height: 600px;
+        background-size: 100% auto;
+
+        aside {
+            width: 300px;
+            margin-left: -350px;
+        }
+        p {
+            //font-size: 1em;
+        }
+    }
+
+    .fixOverflowSteps {
+        height: 60px;
+    }
+
+    .mongolfiere__wrapper.higher {
+        height: 800px;
+    }
+
+    .mongolfiera__with__piada {
+        background-size: 70% auto;
+        background-position: center center;
+        height: 700px;
+    }
+
+    .tipologie img {
+        width: 100%;
+    }
+
+    .provala{
+        width: 100%;
+        background-size: contain;
+        padding-top: 46%;
+
+        img {
+            width: 40%;
+        }
+    }
+
+    #contatti .clouds__wrapper {
+        display: none;
+    }
+
+    .form--wrapper {
+        background-size: contain;
+        width: 100%;
+        padding: 170px 130px 0 61px;
+    }
+
+}
+
+///////////////////
+// LAYOUT > 320  //
+///////////////////
+
+@media screen and (max-width: 320px) {
+
+    .mongolfiere__wrapper {
+        display: none;
+    }
+
+
+    .steps__production section {
+        height: 370px;
+
+        aside {
+            width: 140px;
+            margin-left: -140px;
+        }
+        h3 {
+           font-size: 1.5em;
+        }
+        p {
+           font-size: 1em;
+        }
+    }
+
+    #step4 .clouds__top {
+        display: none;
+    }
+
+    .clouds__title {
+        padding-top: 0;
+        font-size: 1.5em;
+    }
+
+    .tipologie {
+        .clouds__bottom {
+            display: none;
+        }
+        p {
+            font-size: 1em !important;
+        }
+    }
+
+    .provala {
+        height: 250px;
+    }
+
+    #mainFooter div p {
+        line-height: 32px;
+        font-size: 0.8em;
+        color: #fff;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+}
+
+///////////////////
+// LAYOUT > 960  //
+///////////////////
+
+@media screen and (min-width: 960px) {
+
+    nav ul li a {
+        font-size: 1.375em;
+    }
+    .clam__1 {
+        width: 669px;
+    }
+    .clam__2 {
+        width: 365px;
+    }
+
+}
+

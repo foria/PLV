@@ -82,7 +82,7 @@ $gutter_width: 10px;
 @import "modules/footer";
 
 .grid1{
-	@include generate_helper_classes();	
+	@include generate_helper_classes();
 }
 
 
@@ -97,6 +97,7 @@ article{
 @media screen and (min-width: 720px) {
 
 	$total_width: 720px;
+	$max_width: 95%;
 	$container_margin: auto;
 	$gutter_width: 10px;
 
@@ -112,7 +113,12 @@ article{
 	}
 
 	.grid1{
-		@include generate_helper_classes();	
+		@include generate_helper_classes();
+	}
+
+	article, .wrapper {
+		width: $max_width;
+		max-width: $max_width;
 	}
 
 }
@@ -124,6 +130,7 @@ article{
 @media screen and (min-width: 960px) {
 
 	$total_width: 1500px;
+	$max_width: 900px;
 	$container_margin: auto;
 	$gutter_width: 10px;
 
@@ -139,7 +146,12 @@ article{
 	}
 
 	.grid1{
-		@include generate_helper_classes();	
+		@include generate_helper_classes();
+	}
+
+	article, .wrapper {
+		width: $max_width;
+		max-width: $max_width;
 	}
 }
 
@@ -151,6 +163,7 @@ article{
 @media screen and (min-width: 1500px) {
 
 	$total_width: 1500px;
+	$max_width: 900px;
 	$container_margin: auto;
 	$gutter_width: 10px;
 
@@ -166,8 +179,13 @@ article{
 	}
 
 	.grid1{
-		@include generate_helper_classes();	
+		@include generate_helper_classes();
 		width: $total_width;
+	}
+
+	article, .wrapper {
+		width: $max_width;
+		max-width: $max_width;
 	}
 }
 

@@ -12,7 +12,7 @@
   	filter: alpha(opacity = 0);
   	margin-top:3px;
   	z-index: 9000;
-  	
+
 	.arrow{
 		position: absolute;
 		display: block;
@@ -24,7 +24,7 @@
 		height: 5px;
 		//@include icons-sprite(arrow);
 	}
-	
+
 }
 
 .tooltip.show{
@@ -40,7 +40,7 @@ nav{
 	ul{
 		width: $total_width;
 		max-width: $max_width;
-		margin: 0 auto;	
+		margin: 0 auto;
 		@include clearfix();
 
 		#navDownload{
@@ -63,29 +63,3 @@ nav{
 	}
 }
 
-// ///////////////////////////
-// MEDIA QUERIES
-// ///////////////////////////
-
-@media screen and (min-width: 460px) {
-	
-}
-
-@media screen and (min-width: 550px) {
-}
-
-@media screen and (min-width: 700px) {
-	#navDownload{
-		display: inline-block !important;
-	}
-
-	#navGithub{
-		display: inline-block !important;
-	}
-
-}
-
-
-
-@media screen and (min-width: 900px) {
-}
