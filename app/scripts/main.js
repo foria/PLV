@@ -149,3 +149,14 @@
     window.cbpScroller = cbpScroller;
 
 } )( window );
+
+
+
+$(document).ready(function(){
+    'use strict';
+    $('.show_menu-btn').click(function(){
+        $(this).parent().parent().toggleClass('active');
+    });
+});
+
+

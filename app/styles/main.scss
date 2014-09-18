@@ -567,13 +567,13 @@ div[role="main"] .cbp-so-section p {
     .cbp-so-side {
         float: none;
         width: 100%;
+        padding: 0;
     }
 
     .cbp-so-side img {
         max-width: 100%;
     }
 }
-
 
 ///////////////////
 // LAYOUT > 720  //
@@ -658,23 +658,119 @@ div[role="main"] .cbp-so-section p {
 
 }
 
+
 ///////////////////
 // LAYOUT > 320  //
 ///////////////////
 
 @media screen and (max-width: 320px) {
 
+    #mainHeader {
+        height: auto;
+        background-repeat: repeat;
+        top: -184px;
+        -moz-transition: top 0.5s ease;
+        -o-transition: top 0.5s ease;
+        -webkit-transition: top 0.5s ease;
+        transition: top 0.5s ease;
+        &.active {
+            top: 0;
+        }
+    }
+
+    nav {
+        .logo {
+            width: 73px;
+            height: 80px;
+            background-size: cover;
+            margin-left: -36px;
+            bottom: -16px;
+        }
+        ul {
+            height: auto;
+            padding-bottom: 64px;
+            li {
+                width: 100%;
+                &:empty {
+                    display: none;
+                }
+                a {
+                    display: block;
+                    padding: 12px 0;
+                    border-width: 0
+                }
+                &:nth-child(2) a {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    div[role="main"] {
+        padding-top: 80px;
+        p {
+            font-size: 1.2em;
+            padding: 0 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    h2, h3 {
+        padding: 0 10px;
+    }
+
+    article, .wrapper {
+        margin-bottom: 10px;
+    }
+
+    .clouds__wrapper_clam {
+        padding-top: 20px;
+        height: auto;
+    }
+
+    .clam__wrapper {
+        height: 271px;
+    }
+
+    .clam__1 {
+        width: 75%;
+        top: 10px;
+        left: 10px;
+    }
+
+    .clam__2 {
+        width: 40%;
+        top: 0;
+        right: 10px;
+    }
+
+    .clouds__wrapper, .clouds__top, .clouds__bottom {
+        background: none;
+    }
+
+    .show_menu-btn {
+        display: block;
+    }
+
     .mongolfiere__wrapper {
         display: none;
     }
 
+    #step0 {
+        margin-bottom: 140px;
+        #step0 {
+            display: none;
+        }
+    }
 
     .steps__production section {
-        height: 370px;
+        height: 250px;
+        background: none;
 
         aside {
-            width: 140px;
-            margin-left: -140px;
+            position: static;
+            width: 100%;
+            margin-left: 0;
         }
         h3 {
            font-size: 1.5em;
@@ -686,6 +782,11 @@ div[role="main"] .cbp-so-section p {
 
     #step4 .clouds__top {
         display: none;
+    }
+
+    .touch .fixOverflowSteps {
+        height: 0;
+        margin-bottom: -50px;
     }
 
     .clouds__title {
@@ -704,6 +805,33 @@ div[role="main"] .cbp-so-section p {
 
     .provala {
         height: 250px;
+    }
+
+    .title {
+        font-size: 2.5em;
+        margin: 15px 0;
+        #come-cucinarla header & {
+            margin-bottom: 60px;
+        }
+    }
+
+    #chisiamo {
+        background: none;
+        header {
+            display: none;
+        }
+        footer {
+            background: none;
+        }
+    }
+
+    .form--wrapper {
+        background: none;
+        padding: 0 10px;
+        height: auto;
+        form, aside {
+            width: 100%;
+        }
     }
 
     #mainFooter div p {
